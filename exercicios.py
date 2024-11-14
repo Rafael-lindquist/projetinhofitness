@@ -1,8 +1,7 @@
 import json
+import tkinter as tk
 
 class PlanilhaDeExercicio:
-    def __init__(self):
-        pass
 
     def cadastrar(self, nome: str, descricao = "sem descricao"):
         """Essa funação cadastra exercícios no
@@ -14,19 +13,27 @@ class PlanilhaDeExercicio:
 
         with open("exercicios.json", 'w') as f:
             if self.nome in file.keys():
-                print("Esse exercício já está cadastrado")
+                pass
             else:
                 file[self.nome] = descricao
-            json.dump(file, f, indent=4)
+                json.dump(file, f, indent=4)
 
     def listagem(self):
         """Essa função faz a listagem dos exercícios cadastrados"""
         with open('exercicios.json', 'r') as f:
-            print('Esses são os exercícios:\n')
             file = json.load(f)
+            texto = []
             for i in file.keys():
-                print(i)
-            
+                texto.append(i)
+            texto = "\n".join(texto)
+            janela_listagem = tk.Tk()
+            janela_listagem.config(bg="#333333")
+            janela_listagem.title("Sistema de gerenciamento de treinos")
+            janela_listagem.iconbitmap('gym_86590.ico')
+            label = tk.Label(janela_listagem, text=texto, bg="#333333", fg="white")
+            label.grid(column=0, row=0)
+            tk.mainloop()
+                
     def busca(self, ex: str) -> bool:
         self.ex = ex
         """Essa função busca um exercício no dataset
@@ -34,9 +41,17 @@ class PlanilhaDeExercicio:
         esteja em exercicios.json, senão retorna False"""
         with open("exercicios.json", 'r') as f:
             file = json.load(f)
-            for i in file.keys():
-                if i == self.ex:
-                    print("Exercício já cadastrado")
+            janela_listagem = tk.Tk()
+            janela_listagem.config(bg="#333333")
+            janela_listagem.title("Sistema de gerenciamento de treinos")
+            janela_listagem.iconbitmap('gym_86590.ico')
+            if self.ex in file.keys():
+                texto = f"Exercício já cadastrado: {self.ex} - {file[self.ex]}"
+            else: 
+                texto = "Exercício não cadastrado"
+            label = tk.Label(janela_listagem, text=texto, bg="#333333", fg="white")
+            label.grid(column=0, row=0)
+            tk.mainloop()
                 
     def excluir(self, ex: str):
         """Essa função remove exercícios do dataset"""
@@ -46,5 +61,19 @@ class PlanilhaDeExercicio:
         with open("exercicios.json", 'w') as f:
             del file[self.ex]
             json.dump(file, f, indent=4)
-            print(f"O exercício {self.ex} foi excluido")
+
+    def atualizar(self, ex:str, descricao: str):
+        """Essa função atualiza um exercícios"""
+        self.ex = ex
+        self.descricao = descricao
+        with open("exercicios.json", 'r') as f:
+            file = json.load(f)
+
+        del file[self.ex]
+        file[self.ex] = self.descricao
+
+        with open("exercicios.json", 'w') as f:
+            json.dump(file, f, indent=4)
+
+
     
