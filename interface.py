@@ -92,7 +92,7 @@ def pagina_treinos():
 
     texto_embranco = Label(treinos, text="  ", pady=10, bg='#333333')
     texto_embranco.grid(column=1, row=1)
-    #---------------------Entradas-página-de-treinos---------------------------#"
+    
     # Cadastrar
     cadastrar = Button(treinos, text="Cadastrar", bg='#D2691E', command=lambda: it.cadastrar(nome_treino.get(), idade_treino.get(), altura_treino.get(), peso_treino.get(), dias_treino.get()))
     cadastrar.grid(column=1, row=2, sticky='w')
@@ -124,7 +124,7 @@ def pagina_treinos():
     entrada_excluir.insert(0, "treino")
 
     # busca
-    busca = Button(treinos, text="Buscar", padx=9, bg='#D2691E', command=lambda: it.busca(entrada_busca))
+    busca = Button(treinos, text="Buscar", padx=9, bg='#D2691E', command=lambda: it.busca(entrada_busca.get()))
     busca.grid(column=1, row=4, sticky='w')
     entrada_busca = ttk.Entry(treinos)
     entrada_busca.grid(column=1, row=4, padx=10, pady=5)

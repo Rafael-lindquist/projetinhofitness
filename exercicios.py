@@ -8,10 +8,10 @@ class PlanilhaDeExercicio:
         dataset exercicios.json"""
         self.nome = nome
         self.descricao = descricao
-        with open("exercicios.json", 'r') as f:
+        with open("exercicios.json", 'r', encoding='utf8') as f:
             file = json.load(f)
 
-        with open("exercicios.json", 'w') as f:
+        with open("exercicios.json", 'w', encoding='utf8') as f:
             if self.nome in file.keys():
                 pass
             else:
@@ -20,7 +20,7 @@ class PlanilhaDeExercicio:
 
     def listagem(self):
         """Essa função faz a listagem dos exercícios cadastrados"""
-        with open('exercicios.json', 'r') as f:
+        with open('exercicios.json', 'r', encoding='utf8') as f:
             file = json.load(f)
             texto = []
             for i in file.keys():
@@ -39,7 +39,7 @@ class PlanilhaDeExercicio:
         """Essa função busca um exercício no dataset
         exercicios.json e retorna True caso o exercicios
         esteja em exercicios.json, senão retorna False"""
-        with open("exercicios.json", 'r') as f:
+        with open("exercicios.json", 'r', encoding='utf8') as f:
             file = json.load(f)
             janela_listagem = tk.Tk()
             janela_listagem.config(bg="#333333")
@@ -56,9 +56,9 @@ class PlanilhaDeExercicio:
     def excluir(self, ex: str):
         """Essa função remove exercícios do dataset"""
         self.ex = ex
-        with open("exercicios.json", 'r') as f:
+        with open("exercicios.json", 'r', encoding='utf8') as f:
             file = json.load(f)
-        with open("exercicios.json", 'w') as f:
+        with open("exercicios.json", 'w', encoding='utf8') as f:
             del file[self.ex]
             json.dump(file, f, indent=4)
 
@@ -66,13 +66,13 @@ class PlanilhaDeExercicio:
         """Essa função atualiza um exercícios"""
         self.ex = ex
         self.descricao = descricao
-        with open("exercicios.json", 'r') as f:
+        with open("exercicios.json", 'r', encoding='utf8') as f:
             file = json.load(f)
 
         del file[self.ex]
         file[self.ex] = self.descricao
 
-        with open("exercicios.json", 'w') as f:
+        with open("exercicios.json", 'w', encoding='utf8') as f:
             json.dump(file, f, indent=4)
 
 
