@@ -1,4 +1,4 @@
-# Um sistema de gerenciamento de treinos de academia <img src="gym_86590.ico">
+# Um sistema de gerenciamento de treinos de academia <img src="gym_86590.ico" style="max-height: 30px; max-width: 30px;">
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -12,7 +12,8 @@ A interface poussui links para ir para as outras três páginas: Exercícios, Tr
 ### Exercícios
 <img src="imagens\Captura de tela 2024-11-21 170514.png">
 
-A página de exercícios possui cinco funções: Cadastrar, Excluir, Buscar, Atualizar e Listagem. Nela pode-se fazer alterações no banco de dados de exercicios e a função de listagem exibi a seguinte janela: <img src="imagens\Captura de tela 2024-11-25 084502.png">
+A página de exercícios possui cinco funções: Cadastrar, Excluir, Buscar, Atualizar e Listagem. Nela pode-se fazer alterações no banco de dados de exercicios e a função de listagem exibi a seguinte janela
+<img src="imagens\Captura de tela 2024-11-25 084502.png">
 
 ### Treinos 
 <img src="imagens\Captura de tela 2024-11-21 170717.png">
