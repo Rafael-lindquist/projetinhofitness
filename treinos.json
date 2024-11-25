@@ -1,0 +1,75 @@
+{
+    "Rafael":{
+        "treino":{
+            "Segunda":[
+                [
+                    "Supino ",
+                    "4x10"
+                ],
+                [
+                    "Supino Inclinado",
+                    "4x10"
+                ],
+                [
+                    "Rosca direta",
+                    "4x10"
+                ],
+                [
+                    "Rosca martelo",
+                    "Fazer com 20kg",
+                    "4x10"
+                ]
+            ],
+            "Ter\u00e7a":[
+                [
+                    "Agachamento",
+                    "fazer no Smith",
+                    "8x10"
+                ],
+                [
+                    "panturrilha",
+                    "8x10"
+                ]
+            ],
+            "Quarta":[
+                [
+                    "Eleva\u00e7\u00e3o lateral",
+                    "fazer com halteres",
+                    "6x10"
+                ],
+                [
+                    "Desenvolvimento",
+                    "6x10"
+                ],
+                [
+                    "Tr\u00edceps polia",
+                    "6x10"
+                ],
+                [
+                    "Tr\u00edceps franc\u00eas",
+                    "6x10"
+                ]
+            ],
+            "Quinta":[
+                [
+                    "remada alta",
+                    "6x10"
+                ],
+                [
+                    "remada curvada",
+                    "6x10"
+                ],
+                [
+                    "remada unilateral",
+                    "6x10"
+                ]
+            ]
+        },
+        "informacoes":{
+            "idade":19,
+            "altura":1.81,
+            "peso":19.0,
+            "dias_de_treino":4
+        }
+    }
+}
