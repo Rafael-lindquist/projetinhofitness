@@ -12,7 +12,8 @@ A interface poussui links para ir para as outras três páginas: Exercícios, Tr
 ### Exercícios
 <img src="imagens\Captura de tela 2024-11-21 170514.png">
 
-A página de exercícios possui cinco funções: Cadastrar, Excluir, Buscar, Atualizar e Listagem. Nela pode-se fazer alterações no banco de dados de exercicios e a função de listagem exibi a seguinte janela
+A página de exercícios possui cinco funções: Cadastrar, Excluir, Buscar, Atualizar e Listagem. Nela pode-se fazer alterações no banco de dados de exercicios e a função de listagem exibi a seguinte janela 
+
 <img src="imagens\Captura de tela 2024-11-25 084502.png">
 
 ### Treinos 
